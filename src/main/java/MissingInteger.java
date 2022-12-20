@@ -26,10 +26,20 @@ public class MissingInteger {
         return Arrays.binarySearch(array, key) >= 0;
     }
 
-    public static void main(String[] args) {
-            MissingInteger missingInteger = new MissingInteger();
-            int[] A = {1, 5,4, 7, 10, 2, 3};
-            System.out.println(missingInteger.smallestInt(A));
+//    public static void main(String[] args) {
+//            MissingInteger missingInteger = new MissingInteger();
+//            int[] A = {1, 5,4, 7, 10, 2, 3};
+//            System.out.println(missingInteger.smallestInt(A));
+//    }
+
+    int solution(int[] A) {
+        int ans = A[0];
+        for (int i = 1; i < A.length; i++) {
+            if (ans > A[i]) {
+                ans = A[i];
+            }
+        }
+        return ans;
     }
 
 }
