@@ -5,7 +5,6 @@
  *     Next *ListNode
  * }
  */
- import "fmt"
 
  func reverseList(head *ListNode) *ListNode {
 		arr := []int{}
@@ -26,10 +25,6 @@
 	//create empty listnode - tmp and dummy point to the empty node
 	tmp := &ListNode{}
 	dummy := tmp
-
-	for node := range arr {
-		fmt.Printf("%+v ->", node)
-	}
 
 	for _, node := range arr {
 		//fmt.Printf("%+v ->", node)
